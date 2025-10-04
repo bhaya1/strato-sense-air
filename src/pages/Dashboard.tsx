@@ -2,11 +2,13 @@ import { Droplets, Wind, Thermometer, Activity, AlertTriangle, Leaf } from "luci
 import AQICard from "@/components/AQICard";
 import PollutionHeatmap from "@/components/PollutionHeatmap";
 import PollutantChart from "@/components/PollutantChart";
+import GlobeBackground from "@/components/GlobeBackground";
 import { motion } from "framer-motion";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <GlobeBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <motion.div
