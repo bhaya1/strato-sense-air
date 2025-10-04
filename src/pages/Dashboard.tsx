@@ -2,18 +2,13 @@ import { Droplets, Wind, Thermometer, Activity, AlertTriangle, Leaf } from "luci
 import AQICard from "@/components/AQICard";
 import PollutionHeatmap from "@/components/PollutionHeatmap";
 import PollutantChart from "@/components/PollutantChart";
+import GlobeBackground from "@/components/GlobeBackground";
 import { motion } from "framer-motion";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Animated Globe Background */}
-      <div className="fixed inset-0 -z-10 opacity-20">
-        <div className="absolute inset-0 bg-gradient-radial from-primary/30 via-background to-background" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-indigo-500/20 blur-3xl animate-pulse" />
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-br from-cyan-500/10 to-blue-500/10 blur-2xl animate-[pulse_4s_ease-in-out_infinite]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-2xl animate-[pulse_6s_ease-in-out_infinite]" />
-      </div>
+    <div className="min-h-screen bg-background relative">
+      <GlobeBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <motion.div
